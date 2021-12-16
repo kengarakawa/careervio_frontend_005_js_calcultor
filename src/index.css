@@ -1,0 +1,135 @@
+* {
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  background-color: #333333;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  min-height: 100vh;
+  
+}
+
+ 
+
+
+
+#calculator {
+  width:500px !important;
+  display:grid; 
+  border:3px solid #000000;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px,auto); 
+  grid-template-areas:
+  "display display display display"
+  "clear clear percentage divide"
+  "b7 b8 b9 multiply"
+  "b4 b5 b6 subtract"
+  "b1 b2 b3 add"
+  "b0 b0 bdot equal" 
+}
+
+.calc-button {
+  text-align: center;
+  min-width:50px;
+  background:#666666;
+  color:white;
+  font-size:30px;
+  padding:20px;
+  border:outset 1px #333333;
+  width:100%;
+  cursor: pointer;
+}
+
+#display {
+  width: 500px !important;
+  /* overflow-x: hidden; */
+    grid-area: display;
+    background-color:#000;
+    color: #FFFFFF;
+    font-size:80px;
+    padding: 5px 20px 5px 20px;
+    text-align: right;
+}
+
+.add {
+  grid-area: add;
+}
+.subtract {
+  grid-area: subtract;
+}
+.multiply {
+  grid-area: multiply;
+}
+.divide {
+  grid-area: divide;
+}
+.equal {
+  grid-area: equal;
+  background-color: teal;
+}
+.b0 {
+  grid-area: b0;
+}
+.b1 {
+  grid-area: b1;
+}
+.b2 {
+  grid-area: b2;
+}
+.b3 {
+  grid-area: b3;
+}
+.b4 {
+  grid-area: b4;
+}
+.b5 {
+  grid-area: b5;
+}
+.b6 {
+  grid-area: b6;
+}
+.b7 {
+  grid-area: b7;
+}
+.b8 {
+  grid-area: b8;
+}
+.b9 {
+  grid-area: b9;
+}
+
+.bdot {
+  grid-area: bdot;
+}
+.clear {
+  grid-area: clear;
+  background-color: #F28D00;
+  color:#333333;
+}
+
+.debug {
+   position: fixed;
+   top:30%;
+   right:30px;
+   background-color: lime;;
+   font-size:50px;
+   display:none;
+}
